@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Question;
 use Illuminate\Http\Request;
 
-class QuestionsController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        $questions = Question::latest()->paginate(5);
-
-        return view('questions.index',\compact('questions'));
+        return view('home');
     }
 
     /**
@@ -43,10 +40,10 @@ class QuestionsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Question  $question
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show($id)
     {
         //
     }
@@ -54,10 +51,10 @@ class QuestionsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Question  $question
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit($id)
     {
         //
     }
@@ -66,10 +63,10 @@ class QuestionsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Question  $question
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +74,10 @@ class QuestionsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Question  $question
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy($id)
     {
         //
     }
