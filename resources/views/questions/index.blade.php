@@ -35,9 +35,13 @@
                                Asked By: <a href="{{ $question->user->url }}">{{ $question->user->name }}</a>
                                <small class="text-muted">{{ $question->created_date }}</small>
                            </p>
+                           <div class="d-flex align-items-center">
+                            <h3 class="mt-0">{{$question->title}}</h3>
+                            <div class="ml-auto">
+                                <a href="{{ route('questions.edit',$question->id)}}" class="btn btn-outline-info">Edit</a>
+                            </div>
+                           </div>
 
-
-                           <h3 class="mt-0">{{$question->title}}</h3>
                            {{ Str::limit($question->body,250) }}
                        </div>
                    </div>
