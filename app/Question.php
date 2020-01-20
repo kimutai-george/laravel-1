@@ -30,6 +30,17 @@ class Question extends Model
 
     }
 
+    public function getUrlAttribute()
+    {
+        return route('questions.show',$this->slug);
+    }
+
+    public function getCreatedDateAttribute()
+    {
+        return $this->created_at->diffForHumans();
+
+    }
+
     public function getStatusAttribute()
     {
         if($this->answers > 0)
