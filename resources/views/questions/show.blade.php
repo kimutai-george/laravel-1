@@ -16,6 +16,17 @@
 
                 <div class="card-body">
                    {!! $question->body_html !!}
+                   <div class="float-right">
+                    <span class="text-muted">Answered {{ $question->created_date }}</span>
+                    <div class="media mt-2">
+                    <a href="{{ $question->user->url }}" class="pr-2">
+                        <img src="{{ $question->user->avatar }}">
+                    </a>
+                    <div class="media-body mt-1">
+                        <a href="{{ $question->user->url }}">{{ $question->user->name }}</a>
+                    </div>
+                    </div>
+                </div>
                     </form>
                 </div>
             </div>
