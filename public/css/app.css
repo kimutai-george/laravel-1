@@ -11395,3 +11395,48 @@ a.text-dark:focus {
   display: inline;
 }
 
+.votecontrols {
+  min-width: 60px;
+  margin-right: 40px;
+  text-align: center;
+  color: #343a40;
+}
+
+.votecontrols span,
+.votecontrols a {
+  display: block;
+}
+
+.votecontrols span.votes-count {
+  font-size: 25px;
+}
+
+.votecontrols span.favorites-count {
+  font-size: 12px;
+}
+
+.votecontrols a {
+  cursor: pointer;
+  color: #495057;
+}
+
+.votecontrols .off {
+  color: #adb5bd;
+}
+
+.votecontrols .off:hover {
+  color: #adb5bd;
+}
+
+.votecontrols .favorited {
+  color: #ffed4a;
+}
+
+.votecontrols .favorited:hover {
+  color: #ffed4a;
+}
+
+.votecontrols .vote-accepted {
+  color: #38c172;
+}
+

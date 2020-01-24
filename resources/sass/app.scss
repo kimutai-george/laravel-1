@@ -46,5 +46,47 @@
     form.form-delete {
         display: inline;
     }
+}
 
+.votecontrols {
+        min-width: 60px;
+        margin-right: 40px;
+        text-align: center;
+        color: $gray-800;
+
+span, a {
+        display: block;
+    }
+
+span {
+        &.votes-count {
+            font-size: 25px;
+        }
+        &.favorites-count {
+            font-size: 12px;
+        }
+    }
+
+a {
+        cursor: pointer;
+        color: $gray-700;
+
+    }
+
+.off {
+    color: $gray-500;
+    }
+
+.off:hover  {
+        color: $gray-500;
+}
+.favorited {
+        color: $warning;
+    }
+.favorited:hover {
+        color: $warning;
+    }
+.vote-accepted {
+    color: $green;
+}
 }
