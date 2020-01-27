@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+
+use App\Policies\AnswerPolicy;
+use App\Answer;
 use App\Policies\QuestionPolicy;
 use App\Question;
 use Illuminate\Auth\Access\Gate;
@@ -16,6 +19,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Question::class => QuestionPolicy::class,
+        Answer::class => AnswerPolicy::class,
     ];
 
     /**
