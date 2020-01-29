@@ -33,3 +33,4 @@ Route::resource('questions.answers', 'AnswersController')->except('index','creat
 
 
 Route::get('/questions/{slug}', 'QuestionsController@show')->name('questions.show');
+Route::post('/answers/{answer}/accept', 'AcceptAnswerController')->name('answers.accept');
